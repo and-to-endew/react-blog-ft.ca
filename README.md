@@ -1,70 +1,17 @@
-# Getting Started with Create React App
+react 간단 정리
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+-react는 js와 유사한 언어인 jsx를 사용한다. 그래서 js와 약간의 차이점이 존재한다.
+우선 우리가 react 프로젝트를 만들면 App.js라는 파일이 존재한다. 이게 메인 파일이고 우리가 여기에 html코드를 작성하면 된다. 그리고 index.js가 또 존재하는데
+이 파일은 우리가 원래 html 코드는 html파일에 작성해야하는데 App.js에 html을 작성할 수 있게 도와주는 파일이라고 생각하면 된다.
 
-## Available Scripts
 
-In the project directory, you can run:
+-class 대신에 className을 사용한다.
+-변수를 사용, 적용하려면 {변수명} 을 사용한다.
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+-state 사용
+예를 들어 var name="맛집" 이라고 해보자.
+이때 우리가 name이라는 변수를 강남 맛집이라고  변경해야 할 때, 기존 js의 경우 변경되지 않는다. 아마 기존 언어들과 = 이라는 등호 기호의 의미가 달라서일거다.
+그렇지만 useState라는 함수를 사용하면 자동으로 재랜더링 된다.
+-> 즉 변동시 자동으로 html에 반영되게 만들고 싶으면 state를 사용하면 된다. 굳이 변경가능성이 없는 것에 굳이 state를 쓸 필요는 없다.
+  let[제목,setTitle]=useState(["추천1","추천2","추천3"]);
+이렇게 배열로 만들고, 	사용할 때는 제목[0]  이런식으로 사용하면 된다.
