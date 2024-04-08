@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 
 function App() {
-  let [제목, setTitle] = useState(["남자추천", "가추천2", "라추천3"]);
+  let [제목, setTitle] = useState(["남자추천", "추천1", "라추천2"]);
   let [모달, setModal] = useState(false);
   let [선택된제목, set선택된제목] = useState(0); // 선택된 제목의 인덱스를 저장
 
@@ -18,9 +18,16 @@ function App() {
   }
 
   function 모달열기(index) {
-    set선택된제목(index);
-    setModal(true);
+    if (모달 && 선택된제목 === index) {
+      // 이미 모달이 열려있고, 현재 클릭된 제목이 이미 선택된 제목과 같다면 모달을 닫습니다.
+      setModal(false);
+    } else {
+      // 그렇지 않은 경우, 새로운 제목을 선택하고 모달을 엽니다.
+      set선택된제목(index);
+      setModal(true);
+    }
   }
+
 
   return (
     <div className="App">
@@ -34,6 +41,10 @@ function App() {
           ))}
         </div>
         <div id="right-container">
+          <div id="search-save-box">
+            <input></input>
+            <button>save</button>
+          </div>
           {모달 ? <Modal 제목={제목[선택된제목]} /> : null}
         </div>
       </div>
