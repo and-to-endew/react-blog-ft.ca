@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/react-blog-ft.ca/static/css/main.4df081f4.css",
+    "main.js": "/react-blog-ft.ca/static/js/main.a1c8e1bb.js",
+    "static/js/453.ede2c593.chunk.js": "/react-blog-ft.ca/static/js/453.ede2c593.chunk.js",
+    "index.html": "/react-blog-ft.ca/index.html",
+    "main.4df081f4.css.map": "/react-blog-ft.ca/static/css/main.4df081f4.css.map",
+    "main.a1c8e1bb.js.map": "/react-blog-ft.ca/static/js/main.a1c8e1bb.js.map",
+    "453.ede2c593.chunk.js.map": "/react-blog-ft.ca/static/js/453.ede2c593.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4df081f4.css",
+    "static/js/main.a1c8e1bb.js"
+  ]
+}
