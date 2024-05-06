@@ -3,7 +3,7 @@ import './App.css';
 
 function App() {
   let [제목, setTitle] = useState(["남자추천", "추천1", "라추천2"]);
-  let [모달, setModal] = useState(false);
+  let [모달, setModal] = useState(false);     //모달 상태
   let [선택된제목, set선택된제목] = useState(0); // 선택된 제목의 인덱스를 저장
 
   function 제목삭제(index) {
@@ -28,7 +28,6 @@ function App() {
     }
   }
 
-
   return (
     <div className="App">
       <div className="black-nav">
@@ -36,7 +35,7 @@ function App() {
       </div>
       <div id="containers">
         <div id="left-container">
-          {제목.map((제목, index) => (
+          {제목.map((제목, index) => (        //map 공부하기
             <List key={index} 제목={제목} index={index} 제목삭제={() => 제목삭제(index)} 제목추가={제목추가} 모달열기={() => 모달열기(index)} />
           ))}
         </div>
@@ -71,9 +70,9 @@ function List({ 제목, index, 제목삭제, 제목추가, 모달열기 }) {
         <span onClick={(e) => { e.stopPropagation(); set좋아요(좋아요 + 1); }}>👍</span>{좋아요} {/* 이벤트 전파를 막기 위한 e.stopPropagation() 추가 */}
         <span onClick={(e) => { e.stopPropagation(); set싫어요(싫어요 + 1); }}>👎</span>{싫어요}
       </h4>
-      <span>2021.09.29</span>
+      <span>2021.09.29</span> 
       <button onClick={(e) => {
-        e.stopPropagation(); // 이벤트 전파를 막음
+        e.stopPropagation(); // 이벤트 전파를 막음  => 이벤트 버블링
         제목삭제(); // 제목 삭제 함수 호출
       }}>삭제</button>
     </div>
