@@ -73,3 +73,4 @@ function Modal(){
 homepage 속성을 추가한다.
 2. 그 후, 깃페이지 브랜치가 생성되면, 설정에 가서 브랜치를 변경 후, build를 생성한다.
 3. npm run deploy를 실행한다.
+결과적으로 평상시에 컴파일하면서 확인할 때는 npm start로 하고 
