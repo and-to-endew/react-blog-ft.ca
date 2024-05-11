@@ -1,89 +1,106 @@
-body {
-    background-color:yellowg;
-    background:linear-gradient(to right bottom, yellow, white);
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    margin: 0; /* body의 기본 마진을 제거합니다. */
-    height: auto; /* 화면 전체 높이를 차지하도록 설정합니다. */
-    flex-direction: column;
-}
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%; /* 부모 요소인 body에 꽉 차도록 설정합니다. */
-    height: 100%; /* 부모 요소인 body에 꽉 차도록 설정합니다. */
-}
-.gallery-container {
-    flex-wrap: wrap; /* 요소들을 여러 줄로 배치합니다. */
-    max-width: 1200px; /* 최대 너비로 설정합니다. */
-    display: flex;
-    justify-content: center;/* 가로축을 기준으로 중앙 정렬합니다. */
-    flex-direction: row; /* 요소들을 세로로 배치합니다. */
-      
-}
-.picture-card {
-    margin: 30px;
-    width: 200px;
-    height: 250px;
-    align-items: center;
-    border-radius: 10px;
-    box-shadow: rgb(128, 128, 128) 0px 0px 10px 0px;
-    display: flex;
-    flex-direction: column;
-    text-align: center; /* 내부 요소들을 가운데 정렬합니다. */
-    background-color: white;
-    background-size: cover;
-}
-.picture-card img {
-    width: 170px;
-    height: 170px;
-    border-radius: 10px;
-    margin-top: 15px;
-    object-fit: cover;
-}
-h4{
-    font-weight: bold;
-    margin: 0; /* 기본 마진을 제거합니다. */
-}
-.navbar{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 60px;
-    justify-content: space-between;
-    align-items: center;
-
-}
-.logo{
-    padding-left: 20px;
-    padding-right: 20px;
-    width: 10%;
-    height: auto;
-    align-items: center; /* 요소들을 수직 가운데 정렬 */
-} 
-.pc-menu {
-    padding-right: 20px; /* 메뉴 오른쪽에 간격 추가 */
-    height: auto; /* 메뉴의 높이 설정 */
-    display: flex;
-    align-items: center; /* 요소들을 수직 가운데 정렬 */
-}
-.pc-menu div{
-    padding: 10px; /* 메뉴 간격 설정 */
+.App {
+  text-align: center;
 }
 
-@media screen and (max-width: 400px){
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+.black-nav{
+  display: flex;
+  background-color: black;
+  width: 100%;
+  color:white;
+  padding-left: 20px; 
+}
+
+.modal{
+  margin-top: 20px;
+  padding: 20px;
+  background:white;
+  text-align: left;
+}
+
+div{
+  box-sizing: border-box;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+.list{
+  padding-left: 20px;
 
 }
-@media screen and (max-width: 500px){
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
-@media screen and (max-width: 600px){
+
+.App-link {
+  color: #61dafb;
 }
-@media screen and (max-width: 700px){
+
+#root{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
 }
-@media screen and (max-width: 800px){
+#containers{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+  padding: 10px;
 }
-@media screen and (max-width: 900px){
+#left-container{
+  width: 40%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right:15px;
+
+}
+#right-container{
+  width: 30%;
+  height: auto;
+
+}
+.list{
+  padding: 6px;
+  height: 150px;
+  width: 100%;
+  border: 1px solid #0a0a0a;
+  border-radius: 15px;
+  margin: 10px;
+}
+.search-save-box{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.search-box{
+  width: 50%;
+  height: 16px;
+  border: 1px solid #0a0a0a;
+  border-radius: 1px;
+  margin-right: 5px;
+  padding: 2px;
+}
+.modal{
+  margin-top: 20px;
+  padding: 20px;
+  text-align: left;
+  border: #0a0a0a solid 1px;
 }
