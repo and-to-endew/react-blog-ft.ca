@@ -1,21 +1,20 @@
 import React from 'react';
 import "./Gallery.css";
 
+
 function Gallery() {
     return (
         <div>
             <div className="navbar">
                 <div className="logo">logo</div>
                 <div className="pc-menu">
-                    <div>Gallery</div>
-                    <div>Blog</div>
                 </div>
             </div>
             <div className="container">
                 <h2>📸 Gallery</h2>
                 <div className="gallery-container">
                     <div className="picture-card">
-                    <img src="/minion.jpg" alt="Minion" />
+                    <img src="./img/minion.jpg" alt="Minion" />
 
                         <h4>1</h4>
                         <p>2024.3.25</p>

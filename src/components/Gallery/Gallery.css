@@ -73,8 +73,18 @@ h4{
 .pc-menu div{
     padding: 10px; /* 메뉴 간격 설정 */
 }
+#MovetoGallery{
+    border-radius: 5px;
+}
+#MovetoBlog{
+    border-radius: 5px;
+}
 
 @media screen and (max-width: 400px){
+    .pc-menu{
+        display: none;
+    }
+
 
 }
 @media screen and (max-width: 500px){
